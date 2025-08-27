@@ -1,0 +1,3112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <title>SHAX Charity Theme - Professional WordPress Solutions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* SHAX Presentation Styles - Isolated for CustomHTML */
+      .shax-presentation-container {
+        /* SHAX Premium Color Palette from CSS files */
+        --shax-primary: #27ae60;
+        --shax-primary-dark: #229954;
+        --shax-primary-light: #58d68d;
+        --shax-secondary: #f59e0b;
+        --shax-secondary-dark: #d97706;
+        --shax-secondary-light: #fbbf24;
+        --shax-accent: #8b5cf6;
+        --shax-accent-dark: #7c3aed;
+
+        /* Premium Neutral Colors */
+        --shax-white: #ffffff;
+        --shax-gray-50: #f9fafb;
+        --shax-gray-100: #f3f4f6;
+        --shax-gray-200: #e5e7eb;
+        --shax-gray-300: #d1d5db;
+        --shax-gray-400: #9ca3af;
+        --shax-gray-500: #6b7280;
+        --shax-gray-600: #4b5563;
+        --shax-gray-700: #374151;
+        --shax-gray-800: #1f2937;
+        --shax-gray-900: #111827;
+
+        /* Premium Status Colors */
+        --shax-success: #10b981;
+        --shax-warning: #f59e0b;
+        --shax-error: #ef4444;
+        --shax-info: #3b82f6;
+
+        /* Premium Gradients */
+        --shax-gradient-primary: linear-gradient(
+          135deg,
+          var(--shax-primary) 0%,
+          var(--shax-primary-dark) 100%
+        );
+        --shax-gradient-secondary: linear-gradient(
+          135deg,
+          var(--shax-secondary) 0%,
+          var(--shax-secondary-dark) 100%
+        );
+        --shax-gradient-accent: linear-gradient(
+          135deg,
+          var(--shax-accent) 0%,
+          var(--shax-accent-dark) 100%
+        );
+        --shax-gradient-success: linear-gradient(
+          135deg,
+          var(--shax-success) 0%,
+          #059669 100%
+        );
+        --shax-gradient-warning: linear-gradient(
+          135deg,
+          var(--shax-warning) 0%,
+          var(--shax-secondary-dark) 100%
+        );
+
+        /* Premium Shadows */
+        --shax-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shax-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shax-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shax-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        --shax-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+        /* Premium Transitions */
+        --shax-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        --shax-transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        --shax-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        /* Container Reset */
+        font-family: "Poppins", sans-serif;
+        /* Subtle premium grid texture layered over soft gradient */
+        background-image:
+          /* Vertical lines - SHAX Green tint */
+          linear-gradient(
+            to right,
+            color-mix(in srgb, var(--shax-primary) 6%, transparent) 1px,
+            transparent 1px
+          ),
+          /* Horizontal lines - SHAX Orange tint */
+          linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--shax-secondary) 5%, transparent) 1px,
+            transparent 1px
+          ),
+          linear-gradient(135deg, var(--shax-gray-50) 0%, var(--shax-gray-100) 100%);
+        background-size: 24px 24px, 24px 24px, auto;
+        background-position: 0 0, 0 0, 0 0;
+        color: var(--shax-gray-900);
+        line-height: 1.6;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .shax-presentation-container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Ensure isolation from parent theme */
+      .shax-presentation-container {
+        isolation: isolate;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Override any parent theme styles */
+      .shax-presentation-container h1,
+      .shax-presentation-container h2,
+      .shax-presentation-container h3,
+      .shax-presentation-container h4,
+      .shax-presentation-container h5,
+      .shax-presentation-container h6,
+      .shax-presentation-container p,
+      .shax-presentation-container div,
+      .shax-presentation-container span,
+      .shax-presentation-container button {
+        font-family: "Poppins", sans-serif !important;
+        line-height: inherit !important;
+      }
+
+      /* Ensure proper font loading */
+      .shax-presentation-container {
+        font-display: swap;
+      }
+
+      .slide {
+        padding: 2rem 1rem;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .slide-content {
+        background: var(--shax-white);
+        border-radius: 20px;
+        padding: 2rem;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: var(--shax-shadow-xl);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slide-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(
+          90deg,
+          var(--shax-primary),
+          var(--shax-secondary),
+          var(--shax-accent)
+        );
+      }
+
+      /* Maintenance Section Full */
+      .maintenance-section-full {
+        padding: 1rem 0;
+      }
+
+      .maintenance-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .maintenance-intro p {
+        font-size: 1.1rem;
+        color: var(--shax-gray-700);
+        font-weight: 500;
+      }
+
+      .maintenance-grid-full {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+      }
+
+      .maintenance-card-full {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shax-shadow-lg);
+        border: 2px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+      }
+
+      .maintenance-card-full:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shax-shadow-xl);
+        border-color: var(--shax-primary);
+      }
+
+      .maintenance-card-full .maintenance-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .maintenance-card-full .maintenance-content h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+        margin-bottom: 0.5rem;
+      }
+
+      .maintenance-card-full .maintenance-price {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--shax-primary);
+        margin-bottom: 1rem;
+      }
+
+      .maintenance-card-full .maintenance-content p {
+        font-size: 0.9rem;
+        color: var(--shax-gray-600);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .maintenance-features {
+        list-style: none;
+        padding: 0;
+      }
+
+      .maintenance-features li {
+        padding: 0.25rem 0;
+        color: var(--shax-gray-700);
+        font-size: 0.85rem;
+        font-weight: 500;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .maintenance-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--shax-primary);
+        font-weight: 900;
+        font-size: 1rem;
+      }
+
+      /* Purpose Section */
+      .purpose-section {
+        padding: 1rem 0;
+      }
+
+      .purpose-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .purpose-lead {
+        font-size: 1.2rem;
+        color: var(--shax-gray-700);
+        font-weight: 500;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .benefit-card {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: var(--shax-shadow-lg);
+        border: 2px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .benefit-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shax-shadow-xl);
+        border-color: var(--shax-primary);
+      }
+
+      .benefit-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .benefit-content h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+        margin-bottom: 0.75rem;
+      }
+
+      .benefit-content p {
+        font-size: 0.9rem;
+        color: var(--shax-gray-600);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        background: var(--shax-gradient-primary);
+        color: var(--shax-white);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 900;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          45deg,
+          var(--shax-white),
+          var(--shax-gray-100)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero .tagline {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        opacity: 0.95;
+        position: relative;
+        z-index: 2;
+      }
+
+      .price-highlight {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .stat-card {
+        background: var(--shax-white);
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        box-shadow: var(--shax-shadow-lg);
+        border: 1px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shax-shadow-xl);
+      }
+
+      .stat-number {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-weight: 900;
+        color: var(--shax-primary);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--shax-gray-600);
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      /* Section Titles */
+      .section-title {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--shax-gray-900);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: var(--shax-gradient-primary);
+        display: block;
+        margin: 1rem auto;
+        border-radius: 2px;
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-card {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: var(--shax-shadow-lg);
+        transition: all var(--shax-transition-normal);
+        border: 1px solid var(--shax-gray-200);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shax-shadow-xl);
+      }
+
+      .feature-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .feature-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+      }
+
+      .feature-price {
+        font-size: 1rem;
+        font-weight: 800;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        color: var(--shax-white);
+        position: relative;
+      }
+
+      .price-free {
+        background: var(--shax-gradient-success);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+      }
+      .price-low {
+        background: var(--shax-gradient-warning);
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+      }
+      .price-medium {
+        background: var(--shax-gradient-accent);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+      }
+      .price-high {
+        background: linear-gradient(135deg, var(--shax-error), #dc2626);
+        box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+      }
+
+      .feature-description {
+        color: var(--shax-gray-600);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        font-size: 0.9rem;
+      }
+
+      .benefits-list {
+        list-style: none;
+      }
+
+      .benefits-list li {
+        padding: 0.5rem 0;
+        color: var(--shax-gray-800);
+        position: relative;
+        padding-left: 1.5rem;
+        font-weight: 500;
+        font-size: 0.85rem;
+      }
+
+      .benefits-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--shax-primary);
+        font-weight: 900;
+        font-size: 1rem;
+      }
+
+      /* Packages Section */
+      .packages-section {
+        background: linear-gradient(
+          135deg,
+          var(--shax-gray-50) 0%,
+          var(--shax-gray-100) 100%
+        );
+        border-radius: 20px;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Compact Package Cards */
+      .packages-grid-compact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .package-card-compact {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: var(--shax-shadow-lg);
+        transition: all var(--shax-transition-normal);
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--shax-gray-200);
+      }
+
+      .package-card-compact::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .package-card-compact:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shax-shadow-xl);
+      }
+
+      .package-card-compact.featured {
+        border: 3px solid var(--shax-primary);
+        transform: scale(1.01);
+        box-shadow: 0 15px 30px rgba(39, 174, 96, 0.15);
+      }
+
+      .package-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+
+      .package-features-compact {
+        margin: 1rem 0;
+      }
+
+      .feature-item {
+        padding: 0.25rem 0;
+        color: var(--shax-gray-700);
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      /* Complete Package Section */
+      .complete-package-section {
+        margin-bottom: 2rem;
+      }
+
+      .complete-package-card {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: var(--shax-shadow-xl);
+        border: 3px solid var(--shax-primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .complete-package-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .complete-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .complete-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--shax-gray-900);
+      }
+
+      .complete-price {
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--shax-primary);
+      }
+
+      .complete-description {
+        color: var(--shax-gray-600);
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .complete-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .complete-feature-item {
+        padding: 0.25rem 0;
+        color: var(--shax-gray-700);
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      /* Addons Section */
+      .addons-section {
+        margin-top: 2rem;
+      }
+
+      .addons-title {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+        margin-bottom: 1rem;
+      }
+
+      .addons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .addon-card {
+        background: var(--shax-white);
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: var(--shax-shadow-md);
+        border: 1px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+      }
+
+      .addon-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shax-shadow-lg);
+      }
+
+      .addon-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .addon-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+      }
+
+      .addon-price {
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: var(--shax-primary);
+      }
+
+      .addon-description {
+        font-size: 0.75rem;
+        color: var(--shax-gray-600);
+      }
+
+      .package-card {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        box-shadow: var(--shax-shadow-lg);
+        transition: all var(--shax-transition-normal);
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--shax-gray-200);
+      }
+
+      .package-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .package-card:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shax-shadow-xl);
+      }
+
+      .package-card.featured {
+        border: 3px solid var(--shax-primary);
+        transform: scale(1.01);
+        box-shadow: 0 20px 40px rgba(39, 174, 96, 0.15);
+      }
+
+      .package-card.featured::after {
+        content: "MOST POPULAR";
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background: var(--shax-primary);
+        color: var(--shax-white);
+        padding: 0.5rem 2rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transform: rotate(45deg);
+        box-shadow: var(--shax-shadow-md);
+      }
+
+      .package-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--shax-gray-900);
+        margin-bottom: 1rem;
+      }
+
+      .package-price {
+        font-size: clamp(2.5rem, 5vw, 3rem);
+        font-weight: 900;
+        color: var(--shax-primary);
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .package-description {
+        color: var(--shax-gray-600);
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .package-features {
+        text-align: left;
+        margin-bottom: 1.5rem;
+      }
+
+      .package-features li {
+        padding: 0.5rem 0;
+        color: var(--shax-gray-800);
+        font-weight: 500;
+        font-size: 0.85rem;
+      }
+
+      .cta-button {
+        background: var(--shax-gradient-primary);
+        color: var(--shax-white);
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all var(--shax-transition-normal);
+        width: 100%;
+        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+      }
+
+      /* Comparison Table */
+      .comparison-table {
+        background: var(--shax-white);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shax-shadow-xl);
+        margin: 2rem 0;
+        border: 1px solid var(--shax-gray-200);
+      }
+
+      .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 1rem 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--shax-gray-200);
+      }
+
+      .comparison-table th {
+        background: var(--shax-gradient-primary);
+        color: var(--shax-white);
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .comparison-table tr:nth-child(even) {
+        background: var(--shax-gray-50);
+      }
+
+      .comparison-table tr:hover {
+        background: var(--shax-gray-100);
+      }
+
+      .highlight-value {
+        color: var(--shax-primary);
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+
+      /* Navigation */
+      .navigation {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 50px;
+        padding: 1rem;
+        box-shadow: var(--shax-shadow-xl);
+        z-index: 100;
+        border: 1px solid var(--shax-gray-200);
+      }
+
+      .nav-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--shax-gray-300);
+        display: inline-block;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        transition: all var(--shax-transition-normal);
+        position: relative;
+      }
+
+      .nav-dot.active {
+        background: var(--shax-primary);
+        transform: scale(1.3);
+        box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+      }
+
+      .nav-dot:hover {
+        transform: scale(1.2);
+      }
+
+      /* Mobile-First Responsive Design */
+      @media (max-width: 768px) {
+        /* Mobile Layout Overhaul - Flexbox Based */
+        .slide {
+          padding: 1rem 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .slide-content {
+          padding: 1rem;
+          width: 100%;
+          border-radius: 16px;
+          margin-top: 0.5rem;
+          overflow: visible;
+          max-height: none;
+        }
+
+        /* Mobile Hero Section */
+        .hero {
+          padding: 1rem 0.75rem;
+          margin-bottom: 1rem;
+          border-radius: 12px;
+        }
+
+        .hero h1 {
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+        }
+
+        .hero .tagline {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          line-height: 1.4;
+        }
+
+        .price-highlight {
+          font-size: 1.25rem;
+          padding: 0.6rem 1.25rem;
+          border-radius: 20px;
+        }
+
+        /* Mobile Section Titles */
+        .section-title {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          line-height: 1.3;
+        }
+
+        .section-title::after {
+          width: 50px;
+          height: 3px;
+          margin: 0.5rem auto;
+        }
+
+        /* Mobile Stats - Flexbox Layout */
+        .stats-section {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin: 1rem 0;
+        }
+
+        .stat-card {
+          flex: 1 1 calc(50% - 0.25rem);
+          min-width: 120px;
+          padding: 0.75rem 0.5rem;
+          border-radius: 8px;
+        }
+
+        .stat-number {
+          font-size: 1.25rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .stat-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+
+        /* Mobile Benefits - Flexbox Layout */
+        .benefits-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .benefit-card {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .benefit-icon {
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .benefit-content h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .benefit-content p {
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+
+        .purpose-lead {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          line-height: 1.5;
+        }
+
+        /* Mobile Special Features - Flexbox Layout */
+        .special-features-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .special-feature-card {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .special-icon {
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .special-content h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .special-list li {
+          font-size: 0.8rem;
+          margin-bottom: 0.3rem;
+          line-height: 1.3;
+        }
+
+        .special-lead {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          line-height: 1.5;
+        }
+
+        /* Mobile Package Cards - Flexbox Layout */
+        .packages-grid-compact {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .package-card-compact {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .package-header {
+          margin-bottom: 0.4rem;
+        }
+
+        .package-title {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        .package-price {
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
+
+        .package-description {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.3;
+        }
+
+        .package-features-compact {
+          margin: 0.6rem 0;
+        }
+
+        .feature-item {
+          font-size: 0.75rem;
+          margin-bottom: 0.3rem;
+          line-height: 1.3;
+        }
+
+        /* Mobile Complete Package - Flexbox Layout */
+        .complete-package-card {
+          padding: 1.25rem;
+          border-radius: 12px;
+        }
+
+        .complete-header {
+          margin-bottom: 0.6rem;
+        }
+
+        .complete-title {
+          font-size: 1.2rem;
+        }
+
+        .complete-price {
+          font-size: 1.3rem;
+        }
+
+        .complete-description {
+          font-size: 0.85rem;
+          margin-bottom: 0.8rem;
+          line-height: 1.4;
+        }
+
+        .complete-feature-categories {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .feature-category {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .category-title {
+          font-size: 0.85rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .complete-feature-item {
+          font-size: 0.75rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.3;
+        }
+
+        /* Mobile Maintenance Cards - Flexbox Layout */
+        .maintenance-grid-full {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .maintenance-card-full {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .maintenance-card-full .maintenance-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .maintenance-card-full .maintenance-content h4 {
+          font-size: 1rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .maintenance-card-full .maintenance-price {
+          font-size: 1.1rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .maintenance-card-full .maintenance-content p {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.4;
+        }
+
+        .maintenance-features li {
+          font-size: 0.75rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.3;
+        }
+
+        /* Mobile Addons - Flexbox Layout */
+        .addons-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .addon-card {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .addon-header {
+          margin-bottom: 0.3rem;
+        }
+
+        .addon-title {
+          font-size: 0.85rem;
+        }
+
+        .addon-price {
+          font-size: 0.85rem;
+        }
+
+        .addon-description {
+          font-size: 0.7rem;
+          line-height: 1.3;
+        }
+
+        /* Mobile Comparison Table - Compact */
+        .comparison-table {
+          font-size: 0.7rem;
+          margin: 1rem 0;
+          border-radius: 10px;
+        }
+
+        .comparison-table table {
+          width: 100%;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.4rem 0.3rem;
+        }
+
+        /* Mobile Navigation - Bottom Fixed */
+        .navigation {
+          bottom: 0.75rem;
+          padding: 0.75rem;
+          border-radius: 25px;
+        }
+
+        .nav-dot {
+          width: 10px;
+          height: 10px;
+          margin: 0 0.25rem;
+        }
+
+        /* Mobile CTA Buttons */
+        .cta-button {
+          font-size: 0.9rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 20px;
+          font-weight: 600;
+        }
+
+        .complete-savings {
+          font-size: 0.8rem;
+          margin-top: 0.5rem;
+        }
+
+        /* Mobile Scrollbar Styling */
+        .slide-content::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        .slide-content::-webkit-scrollbar-track {
+          background: var(--shax-gray-100);
+          border-radius: 2px;
+        }
+
+        .slide-content::-webkit-scrollbar-thumb {
+          background: var(--shax-primary);
+          border-radius: 2px;
+        }
+
+        /* Mobile Touch Improvements */
+        .cta-button {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        .nav-dot {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        /* Mobile Performance Optimizations */
+        .slide-content {
+          -webkit-overflow-scrolling: touch;
+          will-change: transform;
+        }
+
+        /* Mobile Safe Areas */
+        .slide {
+          padding-left: env(safe-area-inset-left);
+          padding-right: env(safe-area-inset-right);
+        }
+
+        .navigation {
+          bottom: calc(0.75rem + env(safe-area-inset-bottom));
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Small Mobile Optimizations - Flexbox */
+        .slide {
+          padding: 0.4rem;
+          min-height: 100vh;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        .slide-content {
+          padding: 0.75rem;
+          width: 100%;
+          border-radius: 12px;
+          margin-top: 0.25rem;
+          overflow: visible;
+          max-height: none;
+        }
+
+        /* Small Mobile Hero */
+        .hero {
+          padding: 1.25rem 0.75rem;
+          margin-bottom: 1.25rem;
+          border-radius: 10px;
+        }
+
+        .hero h1 {
+          font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+        }
+
+        .hero .tagline {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          line-height: 1.4;
+        }
+
+        .price-highlight {
+          font-size: 1.25rem;
+          padding: 0.6rem 1.25rem;
+          border-radius: 20px;
+        }
+
+        /* Small Mobile Section Titles */
+        .section-title {
+          font-size: 1.5rem;
+          margin-bottom: 1.25rem;
+          line-height: 1.3;
+        }
+
+        .section-title::after {
+          width: 50px;
+          height: 3px;
+          margin: 0.6rem auto;
+        }
+
+        /* Small Mobile Stats - Flexbox */
+        .stats-section {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.4rem;
+          margin: 1rem 0;
+        }
+
+        .stat-card {
+          flex: 1 1 calc(50% - 0.2rem);
+          min-width: 100px;
+          padding: 0.6rem 0.4rem;
+          border-radius: 6px;
+        }
+
+        .stat-number {
+          font-size: 1.25rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .stat-label {
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+
+        /* Small Mobile Benefits - Flexbox */
+        .benefits-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .benefit-card {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .benefit-icon {
+          font-size: 1.75rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .benefit-content h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .benefit-content p {
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+
+        .purpose-lead {
+          font-size: 0.9rem;
+          margin-bottom: 1.25rem;
+          line-height: 1.5;
+        }
+
+        /* Small Mobile Special Features - Flexbox */
+        .special-features-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .special-feature-card {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .special-icon {
+          font-size: 1.75rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .special-content h3 {
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .special-list li {
+          font-size: 0.8rem;
+          margin-bottom: 0.3rem;
+          line-height: 1.3;
+        }
+
+        .special-lead {
+          font-size: 0.9rem;
+          margin-bottom: 1.25rem;
+          line-height: 1.5;
+        }
+
+        /* Small Mobile Package Cards - Flexbox */
+        .packages-grid-compact {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .package-card-compact {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .package-header {
+          margin-bottom: 0.4rem;
+        }
+
+        .package-title {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+
+        .package-price {
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
+
+        .package-description {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.3;
+        }
+
+        .package-features-compact {
+          margin: 0.6rem 0;
+        }
+
+        .feature-item {
+          font-size: 0.75rem;
+          margin-bottom: 0.3rem;
+          line-height: 1.3;
+        }
+
+        /* Small Mobile Complete Package */
+        .complete-package-card {
+          padding: 1.25rem;
+          border-radius: 12px;
+        }
+
+        .complete-header {
+          margin-bottom: 0.6rem;
+        }
+
+        .complete-title {
+          font-size: 1.2rem;
+        }
+
+        .complete-price {
+          font-size: 1.3rem;
+        }
+
+        .complete-description {
+          font-size: 0.85rem;
+          margin-bottom: 0.8rem;
+          line-height: 1.4;
+        }
+
+        .complete-feature-categories {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .feature-category {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .category-title {
+          font-size: 0.85rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .complete-feature-item {
+          font-size: 0.75rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.3;
+        }
+
+        /* Small Mobile Maintenance - Flexbox */
+        .maintenance-grid-full {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+
+        .maintenance-card-full {
+          padding: 0.8rem;
+          border-radius: 8px;
+        }
+
+        .maintenance-card-full .maintenance-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .maintenance-card-full .maintenance-content h4 {
+          font-size: 1rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .maintenance-card-full .maintenance-price {
+          font-size: 1.1rem;
+          margin-bottom: 0.6rem;
+        }
+
+        .maintenance-card-full .maintenance-content p {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.4;
+        }
+
+        .maintenance-features li {
+          font-size: 0.75rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.3;
+        }
+
+        /* Small Mobile Addons - Flexbox */
+        .addons-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .addon-card {
+          padding: 0.5rem;
+          border-radius: 5px;
+        }
+
+        .addon-header {
+          margin-bottom: 0.3rem;
+        }
+
+        .addon-title {
+          font-size: 0.85rem;
+        }
+
+        .addon-price {
+          font-size: 0.85rem;
+        }
+
+        .addon-description {
+          font-size: 0.7rem;
+          line-height: 1.3;
+        }
+
+        /* Small Mobile Comparison Table */
+        .comparison-table {
+          font-size: 0.7rem;
+          margin: 1.25rem 0;
+          overflow-x: auto;
+          border-radius: 10px;
+        }
+
+        .comparison-table table {
+          min-width: 550px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.5rem 0.3rem;
+          white-space: nowrap;
+        }
+
+        /* Small Mobile Navigation */
+        .navigation {
+          bottom: 0.5rem;
+          padding: 0.6rem;
+          border-radius: 20px;
+        }
+
+        .nav-dot {
+          width: 8px;
+          height: 8px;
+          margin: 0 0.2rem;
+        }
+
+        /* Small Mobile CTA Buttons */
+        .cta-button {
+          font-size: 0.85rem;
+          padding: 0.6rem 1.25rem;
+          border-radius: 18px;
+          font-weight: 600;
+        }
+
+        .complete-savings {
+          font-size: 0.75rem;
+          margin-top: 0.4rem;
+        }
+
+        /* Small Mobile Touch Improvements */
+        .cta-button {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        .nav-dot {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        /* Small Mobile Performance Optimizations */
+        .slide-content {
+          -webkit-overflow-scrolling: touch;
+          will-change: transform;
+        }
+
+        /* Small Mobile Safe Areas */
+        .slide {
+          padding-left: env(safe-area-inset-left);
+          padding-right: env(safe-area-inset-right);
+        }
+
+        .navigation {
+          bottom: calc(0.5rem + env(safe-area-inset-bottom));
+        }
+      }
+
+      @media (max-width: 360px) {
+        /* Extra Small Mobile Optimizations - Flexbox */
+        .slide {
+          padding: 0.3rem;
+          min-height: 100vh;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        .slide-content {
+          padding: 0.6rem;
+          width: 100%;
+          border-radius: 8px;
+          margin-top: 0.2rem;
+          overflow: visible;
+          max-height: none;
+        }
+
+        /* Extra Small Mobile Hero */
+        .hero {
+          padding: 1rem 0.6rem;
+          margin-bottom: 1rem;
+          border-radius: 8px;
+        }
+
+        .hero h1 {
+          font-size: 1.5rem;
+          margin-bottom: 0.4rem;
+          line-height: 1.2;
+        }
+
+        .hero .tagline {
+          font-size: 0.8rem;
+          margin-bottom: 0.8rem;
+          line-height: 1.3;
+        }
+
+        .price-highlight {
+          font-size: 1.1rem;
+          padding: 0.5rem 1rem;
+          border-radius: 18px;
+        }
+
+        /* Extra Small Mobile Section Titles */
+        .section-title {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+          line-height: 1.2;
+        }
+
+        .section-title::after {
+          width: 40px;
+          height: 2px;
+          margin: 0.5rem auto;
+        }
+
+        /* Extra Small Mobile Stats - Flexbox */
+        .stats-section {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.3rem;
+          margin: 0.8rem 0;
+        }
+
+        .stat-card {
+          flex: 1 1 calc(50% - 0.15rem);
+          min-width: 80px;
+          padding: 0.5rem 0.3rem;
+          border-radius: 5px;
+        }
+
+        .stat-number {
+          font-size: 1.1rem;
+          margin-bottom: 0.15rem;
+        }
+
+        .stat-label {
+          font-size: 0.65rem;
+          font-weight: 600;
+        }
+
+        /* Extra Small Mobile Benefits - Flexbox */
+        .benefits-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .benefit-card {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .benefit-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .benefit-content h3 {
+          font-size: 0.85rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .benefit-content p {
+          font-size: 0.75rem;
+          line-height: 1.3;
+        }
+
+        .purpose-lead {
+          font-size: 0.85rem;
+          margin-bottom: 1rem;
+          line-height: 1.4;
+        }
+
+        /* Extra Small Mobile Special Features - Flexbox */
+        .special-features-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .special-feature-card {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .special-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .special-content h3 {
+          font-size: 0.85rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .special-list li {
+          font-size: 0.75rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.2;
+        }
+
+        .special-lead {
+          font-size: 0.85rem;
+          margin-bottom: 1rem;
+          line-height: 1.4;
+        }
+
+        /* Extra Small Mobile Package Cards - Flexbox */
+        .packages-grid-compact {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .package-card-compact {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .package-header {
+          margin-bottom: 0.3rem;
+        }
+
+        .package-title {
+          font-size: 0.9rem;
+          font-weight: 700;
+        }
+
+        .package-price {
+          font-size: 1.1rem;
+          font-weight: 800;
+        }
+
+        .package-description {
+          font-size: 0.75rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.2;
+        }
+
+        .package-features-compact {
+          margin: 0.5rem 0;
+        }
+
+        .feature-item {
+          font-size: 0.7rem;
+          margin-bottom: 0.25rem;
+          line-height: 1.2;
+        }
+
+        /* Extra Small Mobile Complete Package */
+        .complete-package-card {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+
+        .complete-header {
+          margin-bottom: 0.5rem;
+        }
+
+        .complete-title {
+          font-size: 1.1rem;
+        }
+
+        .complete-price {
+          font-size: 1.2rem;
+        }
+
+        .complete-description {
+          font-size: 0.8rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.3;
+        }
+
+        .complete-feature-categories {
+          grid-template-columns: 1fr;
+          gap: 0.6rem;
+        }
+
+        .feature-category {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .category-title {
+          font-size: 0.8rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .complete-feature-item {
+          font-size: 0.7rem;
+          margin-bottom: 0.2rem;
+          line-height: 1.2;
+        }
+
+        /* Extra Small Mobile Maintenance - Flexbox */
+        .maintenance-grid-full {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .maintenance-card-full {
+          padding: 0.6rem;
+          border-radius: 6px;
+        }
+
+        .maintenance-card-full .maintenance-icon {
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .maintenance-card-full .maintenance-content h4 {
+          font-size: 0.9rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .maintenance-card-full .maintenance-price {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .maintenance-card-full .maintenance-content p {
+          font-size: 0.75rem;
+          margin-bottom: 0.5rem;
+          line-height: 1.3;
+        }
+
+        .maintenance-features li {
+          font-size: 0.7rem;
+          margin-bottom: 0.2rem;
+          line-height: 1.2;
+        }
+
+        /* Extra Small Mobile Addons - Flexbox */
+        .addons-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+
+        .addon-card {
+          padding: 0.4rem;
+          border-radius: 4px;
+        }
+
+        .addon-header {
+          margin-bottom: 0.25rem;
+        }
+
+        .addon-title {
+          font-size: 0.8rem;
+        }
+
+        .addon-price {
+          font-size: 0.8rem;
+        }
+
+        .addon-description {
+          font-size: 0.65rem;
+          line-height: 1.2;
+        }
+
+        /* Extra Small Mobile Comparison Table */
+        .comparison-table {
+          font-size: 0.65rem;
+          margin: 1rem 0;
+          overflow-x: auto;
+          border-radius: 8px;
+        }
+
+        .comparison-table table {
+          min-width: 500px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+          padding: 0.4rem 0.2rem;
+          white-space: nowrap;
+        }
+
+        /* Extra Small Mobile Navigation */
+        .navigation {
+          bottom: 0.4rem;
+          padding: 0.5rem;
+          border-radius: 18px;
+        }
+
+        .nav-dot {
+          width: 7px;
+          height: 7px;
+          margin: 0 0.15rem;
+        }
+
+        /* Extra Small Mobile CTA Buttons */
+        .cta-button {
+          font-size: 0.8rem;
+          padding: 0.5rem 1rem;
+          border-radius: 16px;
+          font-weight: 600;
+        }
+
+        .complete-savings {
+          font-size: 0.7rem;
+          margin-top: 0.3rem;
+        }
+
+        /* Extra Small Mobile Touch Improvements */
+        .cta-button {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        .nav-dot {
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        }
+
+        /* Extra Small Mobile Performance Optimizations */
+        .slide-content {
+          -webkit-overflow-scrolling: touch;
+          will-change: transform;
+        }
+
+        /* Extra Small Mobile Safe Areas */
+        .slide {
+          padding-left: env(safe-area-inset-left);
+          padding-right: env(safe-area-inset-right);
+        }
+
+        .navigation {
+          bottom: calc(0.4rem + env(safe-area-inset-bottom));
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      /* Scroll Animations */
+      .slide {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .slide.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Special Features Section */
+      .special-features-section {
+        padding: 1rem 0;
+      }
+
+      .special-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .special-lead {
+        font-size: 1.2rem;
+        color: var(--shax-gray-700);
+        font-weight: 500;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .special-features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .special-feature-card {
+        background: var(--shax-white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: var(--shax-shadow-lg);
+        border: 2px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .special-feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--shax-gradient-secondary);
+      }
+
+      .special-feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shax-shadow-xl);
+        border-color: var(--shax-secondary);
+      }
+
+      .special-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .special-content h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+        margin-bottom: 0.75rem;
+      }
+
+      .special-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .special-list li {
+        font-size: 0.9rem;
+        color: var(--shax-gray-600);
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .special-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--shax-secondary);
+        font-weight: 900;
+        font-size: 0.9rem;
+      }
+      .complete-package-card {
+        background: var(--shax-white);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: var(--shax-shadow-xl);
+        border: 3px solid var(--shax-primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .complete-package-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--shax-gradient-primary);
+      }
+
+      .complete-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .complete-title-section {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .complete-icon {
+        font-size: 2rem;
+      }
+
+      .complete-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+      }
+
+      .complete-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--shax-primary);
+      }
+
+      .complete-description {
+        font-size: 1.1rem;
+        color: var(--shax-gray-600);
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .complete-feature-categories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-category {
+        background: var(--shax-gray-50);
+        border-radius: 12px;
+        padding: 1.25rem;
+        border: 2px solid var(--shax-gray-200);
+        transition: all var(--shax-transition-normal);
+      }
+
+      .feature-category:hover {
+        border-color: var(--shax-primary);
+        transform: translateY(-2px);
+        box-shadow: var(--shax-shadow-lg);
+      }
+
+      .category-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--shax-gray-900);
+        margin-bottom: 0.75rem;
+      }
+
+      .category-features {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .complete-feature-item {
+        font-size: 0.9rem;
+        color: var(--shax-gray-700);
+        padding-left: 1.25rem;
+        position: relative;
+      }
+
+      .complete-feature-item::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--shax-primary);
+        font-weight: 900;
+        font-size: 0.9rem;
+      }
+
+      .complete-cta {
+        text-align: center;
+      }
+
+      .complete-savings {
+        font-size: 0.9rem;
+        color: var(--shax-gray-600);
+        margin-top: 0.75rem;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shax-presentation-container">
+      <!-- Slide 1: Hero -->
+      <div class="slide" id="slide1">
+        <div class="slide-content">
+          <div class="hero">
+            <h1>SHAX Charity Theme</h1>
+            <p class="tagline">
+              Professional WordPress Solutions for Charities & Non-Profits
+            </p>
+            <div class="price-highlight">Starting from £350</div>
+          </div>
+
+          <div class="stats-section">
+            <div class="stat-card">
+              <span class="stat-number">35+</span>
+              <div class="stat-label">Premium Features</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">£8k</span>
+              <div class="stat-label">Value vs Custom Dev</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24hrs</span>
+              <div class="stat-label">Setup Time</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <div class="stat-label">Mobile Responsive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Why We Built This -->
+      <div class="slide" id="slide2">
+        <div class="slide-content">
+          <h2 class="section-title">
+            🎯 Why We Built This Enterprise-Level Theme
+          </h2>
+
+          <div class="purpose-section">
+            <div class="purpose-intro">
+              <p class="purpose-lead">
+                We created this modular, enterprise-level WordPress theme
+                specifically for charities and non-profits because we understand
+                the unique challenges you face.
+              </p>
+            </div>
+
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <div class="benefit-icon">🏗️</div>
+                <div class="benefit-content">
+                  <h3>Modular Architecture</h3>
+                  <p>
+                    Built with interchangeable components that can be added or
+                    removed based on your specific needs. No more paying for
+                    features you don't use.
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                  <h3>Charity-Specific Design</h3>
+                  <p>
+                    Purpose-built for the unique workflows and requirements of
+                    charitable organizations, from volunteer management to
+                    donation processing.
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-content">
+                  <h3>Cost-Effective Solution</h3>
+                  <p>
+                    Eliminates the need for expensive custom development while
+                    providing enterprise-level functionality at a fraction of
+                    the cost.
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-content">
+                  <h3>Rapid Deployment</h3>
+                  <p>
+                    Get your professional website up and running in hours, not
+                    months. Focus on your mission, not technical development.
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">🛡️</div>
+                <div class="benefit-content">
+                  <h3>Built-in Compliance</h3>
+                  <p>
+                    GDPR compliant, accessibility-ready, and security-focused
+                    from the ground up. No additional compliance costs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <div class="benefit-content">
+                  <h3>Scalable Growth</h3>
+                  <p>
+                    Start small and grow your digital presence as your
+                    organization expands. Add features as you need them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: What Makes SHAX Special -->
+      <div class="slide" id="slide3">
+        <div class="slide-content">
+          <h2 class="section-title">🌟 What Makes SHAX Special</h2>
+
+          <div class="special-features-section">
+            <div class="special-intro">
+              <p class="special-lead">
+                Unlike generic business themes, SHAX is purpose-built for
+                charities with features that actually help you make a
+                difference.
+              </p>
+            </div>
+
+            <div class="special-features-grid">
+              <div class="special-feature-card">
+                <div class="special-icon">💝</div>
+                <div class="special-content">
+                  <h3>Raise More Money</h3>
+                  <ul class="special-list">
+                    <li>Online donations with credit/debit cards</li>
+                    <li>Gift Aid collection (extra 25% from UK government)</li>
+                    <li>Recurring monthly donations</li>
+                    <li>Complete donation tracking and reporting</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="special-feature-card">
+                <div class="special-icon">👥</div>
+                <div class="special-content">
+                  <h3>Recruit & Manage Volunteers</h3>
+                  <ul class="special-list">
+                    <li>Volunteer registration forms on your website</li>
+                    <li>Volunteer profiles and information storage</li>
+                    <li>Opportunity listings and communication tools</li>
+                    <li>Complete volunteer dashboard management</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="special-feature-card">
+                <div class="special-icon">📅</div>
+                <div class="special-content">
+                  <h3>Organize Events & Workshops</h3>
+                  <ul class="special-list">
+                    <li>Event creation with full details</li>
+                    <li>Online booking system with time slots</li>
+                    <li>Automatic email reminders and confirmations</li>
+                    <li>Capacity management and event promotion</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="special-feature-card">
+                <div class="special-icon">📊</div>
+                <div class="special-content">
+                  <h3>Track Your Impact</h3>
+                  <ul class="special-list">
+                    <li>Visitor analytics and performance monitoring</li>
+                    <li>Donation reports and financial tracking</li>
+                    <li>Volunteer statistics and engagement metrics</li>
+                    <li>Event success metrics and feedback</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Package Options -->
+      <div class="slide" id="slide4">
+        <div class="slide-content">
+          <h2 class="section-title">📊 Package Options</h2>
+
+          <!-- Compact Package Cards -->
+          <div class="packages-grid-compact">
+            <div class="package-card-compact">
+              <div class="package-header">
+                <div class="package-title">Basic Package</div>
+                <div class="package-price">£350</div>
+              </div>
+              <div class="package-description">
+                Perfect for new charities getting started
+              </div>
+              <div class="package-features-compact">
+                <div class="feature-item">
+                  ✓ Professional website with modern design
+                </div>
+                <div class="feature-item">
+                  ✓ Mobile-friendly responsive design
+                </div>
+                <div class="feature-item">
+                  ✓ SEO optimized for search engines
+                </div>
+                <div class="feature-item">✓ Volunteer management system</div>
+                <div class="feature-item">✓ Workshop booking functionality</div>
+                <div class="feature-item">✓ Professional hosting included</div>
+                <div class="feature-item">✓ Security and GDPR compliance</div>
+                <div class="feature-item">
+                  ✓ Accessibility features 
+                </div>
+              </div>
+              <button class="cta-button">Get Started</button>
+            </div>
+
+            <div class="package-card-compact featured">
+              <div class="package-header">
+                <div class="package-title">Starter Package</div>
+                <div class="package-price">£560</div>
+              </div>
+              <div class="package-description">
+                Perfect for charities ready to fundraise
+              </div>
+              <div class="package-features-compact">
+                <div class="feature-item">
+                  ✓ Everything in Basic Package, PLUS:
+                </div>
+                <div class="feature-item">✓ Online donation system</div>
+                <div class="feature-item">✓ Donation tracking and reports</div>
+                <div class="feature-item">✓ Donor management system</div>
+                <div class="feature-item">✓ Event creation and management</div>
+                <div class="feature-item">✓ Online event booking system</div>
+                <div class="feature-item">✓ Email confirmations</div>
+                <div class="feature-item">✓ Event promotion tools</div>
+              </div>
+              <button class="cta-button">Most Popular</button>
+            </div>
+
+            <div class="package-card-compact">
+              <div class="package-header">
+                <div class="package-title">Professional Package</div>
+                <div class="package-price">£720</div>
+              </div>
+              <div class="package-description">
+                Perfect for growing charities with training needs
+              </div>
+              <div class="package-features-compact">
+                <div class="feature-item">
+                  ✓ Everything in Starter Package, PLUS:
+                </div>
+                <div class="feature-item">
+                  ✓ Staff & volunteer training portal
+                </div>
+                <div class="feature-item">✓ Learning management system</div>
+                <div class="feature-item">
+                  ✓ Progress tracking and certificates
+                </div>
+                <div class="feature-item">✓ Advanced analytics dashboard</div>
+                <div class="feature-item">✓ Email marketing system</div>
+                <div class="feature-item">✓ CRM integration</div>
+                <div class="feature-item">✓ Performance monitoring</div>
+              </div>
+              <button class="cta-button">Get Professional</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Complete Package -->
+      <div class="slide" id="slide5">
+        <div class="slide-content">
+          <h2 class="section-title">🌟 Complete Package</h2>
+
+          <!-- Complete Package - Redesigned -->
+          <div class="complete-package-section">
+            <div class="complete-package-card">
+              <div class="complete-header">
+                <div class="complete-title-section">
+                  <div class="complete-icon">⭐</div>
+                  <div class="complete-title">Complete Package</div>
+                </div>
+                <div class="complete-price">£1,530</div>
+              </div>
+
+              <div class="complete-description">
+                Perfect for large charities with comprehensive needs
+              </div>
+
+              <div class="complete-features">
+                <div class="complete-feature-categories">
+                  <div class="feature-category">
+                    <div class="category-title">🏢 Portal Systems</div>
+                    <div class="category-features">
+                      <div class="complete-feature-item">
+                        ✓ Complete portal systems
+                      </div>
+                      <div class="complete-feature-item">
+                        ✓ Partner management
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-category">
+                    <div class="category-title">🎓 Training & Events</div>
+                    <div class="category-features">
+                      <div class="complete-feature-item">
+                        ✓ Workshop & events management
+                      </div>
+                      <div class="complete-feature-item">
+                        ✓ Learning management system
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-category">
+                    <div class="category-title">💝 Fundraising</div>
+                    <div class="category-features">
+                      <div class="complete-feature-item">
+                        ✓ Complete fundraising system
+                      </div>
+                      <div class="complete-feature-item">
+                        ✓ Gift Aid management
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="feature-category">
+                    <div class="category-title">📊 Analytics & Tech</div>
+                    <div class="category-features">
+                      <div class="complete-feature-item">
+                        ✓ Advanced analytics
+                      </div>
+                      <div class="complete-feature-item">✓ API access</div>
+                      <div class="complete-feature-item">
+                        ✓ Mobile app integration
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="complete-cta">
+                <button class="cta-button">Get Everything</button>
+                <div class="complete-savings">
+                  Save £8,000+ vs custom development
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: Maintenance & Support -->
+      <div class="slide" id="slide6">
+        <div class="slide-content">
+          <h2 class="section-title">🛠️ Ongoing Maintenance & Support</h2>
+
+          <div class="maintenance-section-full">
+            <div class="maintenance-intro">
+              <p>
+                To keep websites secure, efficient, and up to date, we offer
+                comprehensive support services:
+              </p>
+            </div>
+
+            <div class="maintenance-grid-full">
+              <div class="maintenance-card-full">
+                <div class="maintenance-icon">🔧</div>
+                <div class="maintenance-content">
+                  <h4>Technical Support</h4>
+                  <div class="maintenance-price">£15 per hour</div>
+                  <p>
+                    Troubleshooting, edits, and assistance for any technical
+                    issues or customizations you need.
+                  </p>
+                  <ul class="maintenance-features">
+                    <li>Bug fixes and troubleshooting</li>
+                    <li>Content updates and edits</li>
+                    <li>Feature customizations</li>
+                    <li>Technical consultation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="maintenance-card-full">
+                <div class="maintenance-icon">🔄</div>
+                <div class="maintenance-content">
+                  <h4>Regular Updates & Improvements</h4>
+                  <div class="maintenance-price">£100 per month</div>
+                  <p>
+                    Security patches, performance updates, and ongoing
+                    enhancements to keep your site modern and secure.
+                  </p>
+                  <ul class="maintenance-features">
+                    <li>Security patches and updates</li>
+                    <li>Performance optimizations</li>
+                    <li>Feature enhancements</li>
+                    <li>Regular backups and monitoring</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: All Add-ons -->
+      <div class="slide" id="slide7">
+        <div class="slide-content">
+          <h2 class="section-title">🔧 All Add-on Features</h2>
+
+          <div class="addons-section">
+            <div class="addons-grid">
+              <!-- Portal Systems -->
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Staff & Volunteer Portal</div>
+                  <div class="addon-price">£150</div>
+                </div>
+                <div class="addon-description">
+                  Complete Learning Management System with training modules,
+                  progress tracking, and certification
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Referrer Portal</div>
+                  <div class="addon-price">£150</div>
+                </div>
+                <div class="addon-description">
+                  Partner organization management and referral system for
+                  seamless collaboration
+                </div>
+              </div>
+
+              <!-- Workshop & Events -->
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Workshop Gallery</div>
+                  <div class="addon-price">£80</div>
+                </div>
+                <div class="addon-description">
+                  Photo gallery for workshop documentation and sharing with
+                  social integration
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">External Events</div>
+                  <div class="addon-price">£150</div>
+                </div>
+                <div class="addon-description">
+                  External event management and coordination with full
+                  registration system
+                </div>
+              </div>
+
+              <!-- Fundraising & Donations -->
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Donations System</div>
+                  <div class="addon-price">£50</div>
+                </div>
+                <div class="addon-description">
+                  Complete donation management with tracking and donor
+                  relationship tools
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Stripe Payments</div>
+                  <div class="addon-price">£120</div>
+                </div>
+                <div class="addon-description">
+                  Secure online payment processing with multiple currency
+                  support
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Gift Aid Management</div>
+                  <div class="addon-price">£100</div>
+                </div>
+                <div class="addon-description">
+                  UK Gift Aid processing and compliance tracking for tax relief
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Event Management</div>
+                  <div class="addon-price">£160</div>
+                </div>
+                <div class="addon-description">
+                  Event creation and management tools for fundraising events
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Analytics Dashboard</div>
+                  <div class="addon-price">£50</div>
+                </div>
+                <div class="addon-description">
+                  Advanced analytics and reporting dashboard for performance
+                  tracking
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Financial Reports</div>
+                  <div class="addon-price">£120</div>
+                </div>
+                <div class="addon-description">
+                  Financial reporting and tracking tools for transparency
+                </div>
+              </div>
+
+              <!-- Additional Services -->
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">E-commerce Integration</div>
+                  <div class="addon-price">£500-£600</div>
+                </div>
+                <div class="addon-description">
+                  Complete online shop with payment processing
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Mobile Application</div>
+                  <div class="addon-price">£200</div>
+                </div>
+                <div class="addon-description">
+                  Progressive Web App features
+                </div>
+              </div>
+
+              <div class="addon-card">
+                <div class="addon-header">
+                  <div class="addon-title">Multi-language Support</div>
+                  <div class="addon-price">£150-£300</div>
+                </div>
+                <div class="addon-description">
+                  Multi-language website support
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 8: Value Comparison -->
+      <div class="slide" id="slide8">
+        <div class="slide-content">
+          <h2 class="section-title">🎉 Value Proposition</h2>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Solution</th>
+                  <th>Cost</th>
+                  <th>Setup Time</th>
+                  <th>Maintenance</th>
+                  <th>Support</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>SHAX Theme</strong></td>
+                  <td class="highlight-value">£1,530 one-time</td>
+                  <td class="highlight-value">30 minutes</td>
+                  <td class="highlight-value">Automatic updates</td>
+                  <td class="highlight-value">Professional support</td>
+                </tr>
+                <tr>
+                  <td>Custom Development</td>
+                  <td>£8,000 - £10,000</td>
+                  <td>3-6 months</td>
+                  <td>Ongoing development</td>
+                  <td>Developer dependent</td>
+                </tr>
+                <tr>
+                  <td>Monthly Services</td>
+                  <td>£500+ per month</td>
+                  <td>Weeks to months</td>
+                  <td>Service dependent</td>
+                  <td>Variable quality</td>
+                </tr>
+                <tr>
+                  <td>Multiple Plugins</td>
+                  <td>£1,000+ plus conflicts</td>
+                  <td>Days to weeks</td>
+                  <td>DIY troubleshooting</td>
+                  <td>Multiple vendors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="stats-section">
+            <div class="stat-card">
+              <span class="stat-number">90%+</span>
+              <div class="stat-label">Cost Savings</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10x</span>
+              <div class="stat-label">Faster Setup</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">£100</span>
+              <div class="stat-label">Low Monthly Fees</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">24/7</span>
+              <div class="stat-label">Support Access</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="navigation">
+        <a class="nav-dot active" href="#slide1" aria-label="Go to section 1" title="Hero"></a>
+        <a class="nav-dot" href="#slide2" aria-label="Go to section 2" title="Why We Built This"></a>
+        <a class="nav-dot" href="#slide3" aria-label="Go to section 3" title="What Makes SHAX Special"></a>
+        <a class="nav-dot" href="#slide4" aria-label="Go to section 4" title="Package Options"></a>
+        <a class="nav-dot" href="#slide5" aria-label="Go to section 5" title="Complete Package"></a>
+        <a class="nav-dot" href="#slide6" aria-label="Go to section 6" title="Maintenance & Support"></a>
+        <a class="nav-dot" href="#slide7" aria-label="Go to section 7" title="All Add-ons"></a>
+        <a class="nav-dot" href="#slide8" aria-label="Go to section 8" title="Value Proposition"></a>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // Scope everything to the presentation container
+        const container = document.querySelector(
+          ".shax-presentation-container"
+        );
+        if (!container) return;
+
+        let currentSlide = 1;
+        const totalSlides = 8;
+
+        // Intersection Observer for animations
+        const observerOptions = {
+          threshold: 0.3,
+          rootMargin: "0px 0px -100px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        // Observe all slides within the container
+        container.querySelectorAll(".slide").forEach((slide) => {
+          observer.observe(slide);
+        });
+
+        function goToSlide(slideNumber) {
+          currentSlide = slideNumber;
+          container.querySelector(`#slide${slideNumber}`).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update navigation dots
+          container.querySelectorAll(".nav-dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index + 1 === slideNumber);
+          });
+        }
+
+        // Keyboard navigation
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowRight" && currentSlide < totalSlides) {
+            goToSlide(currentSlide + 1);
+          } else if (e.key === "ArrowLeft" && currentSlide > 1) {
+            goToSlide(currentSlide - 1);
+          }
+        });
+
+        // Auto-update navigation based on scroll position
+        window.addEventListener("scroll", function () {
+          const slides = container.querySelectorAll(".slide");
+          const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+          slides.forEach((slide, index) => {
+            const slideTop = slide.offsetTop;
+            const slideBottom = slideTop + slide.offsetHeight;
+
+            if (scrollPosition >= slideTop && scrollPosition <= slideBottom) {
+              if (currentSlide !== index + 1) {
+                currentSlide = index + 1;
+                container
+                  .querySelectorAll(".nav-dot")
+                  .forEach((dot, dotIndex) => {
+                    dot.classList.toggle(
+                      "active",
+                      dotIndex + 1 === currentSlide
+                    );
+                  });
+              }
+            }
+          });
+        });
+
+        // Add staggered animations to feature cards
+        const featureCards = container.querySelectorAll(
+          ".feature-card, .package-card, .stat-card"
+        );
+        featureCards.forEach((card, index) => {
+          card.style.animationDelay = `${index * 0.1}s`;
+          card.classList.add("fade-in-up");
+        });
+
+        // Smooth scroll for better UX
+        container.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = container.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Add hover effects for interactive elements
+        container.querySelectorAll(".cta-button").forEach((button) => {
+          button.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-3px) scale(1.02)";
+          });
+
+          button.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+        // Initialize first slide as visible
+        container.querySelector("#slide1").classList.add("visible");
+      })();
+    </script>
+  </body>
+</html>
